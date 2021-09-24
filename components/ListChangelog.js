@@ -17,8 +17,8 @@ const ListChangelog = ({ gitData }) => {
     <div>
       { gitData.map((data) => {
         return (
-          <div className="text-gray-700 dark:text-gray-400 mb-6 w-[75%] " key={ data.id }>
-            <h1 className="text-pink-500 font-semibold text-2xl">{ data.tag_name }</h1>
+          <div className="first:text-pink-500 text-gray-700 dark:text-gray-400 mb-6 w-[75%] " key={ data.id }>
+            <h1 className="font-semibold text-2xl">{ data.tag_name }</h1>
             <ChangelogParser data={ data } />
             <div className="flex space-x-2 mt-2 ml-5 items-center">
               <a href={ data.assets[0].browser_download_url }>
