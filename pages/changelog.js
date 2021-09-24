@@ -11,12 +11,14 @@ export const getStaticProps = async () => {
 
 const Changelog = ({ gitHubData }) => {
 	return (
-		<div className="">
+		<>
 			<PageHeading text="Changelog" />
-			<div className="pl-40">
-				<ListChangelog gitData={ gitHubData } />
+			<div className="flex justify-center w-full">
+				<div className="w-[76%]">
+					<ListChangelog gitData={ gitHubData } />
+				</div>
 			</div>
-		</div >
+		</ >
 	);
 };
 

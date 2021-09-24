@@ -20,7 +20,7 @@ const ListChangelog = ({ gitData }) => {
     <div>
       { gitData.map((data) => {
         return (
-          <div className="sm:animate-speedAboveEntranceNormal first:text-pink-500 text-gray-700 dark:text-gray-400 mb-10 w-[75%] " key={ data.id }>
+          <div div className="sm:animate-speedAboveEntranceNormal first:text-pink-500 text-gray-700 dark:text-gray-400 mb-10 " key={ data.id } >
             <h1 className="font-semibold text-2xl">{ data.tag_name } <span className="ml-2 text-lg font-normal">({ data.published_at.split('T')[0] })</span></h1>
 
             <div className="sm:animate-speedAboveEntranceSlow">
@@ -47,8 +47,9 @@ const ListChangelog = ({ gitData }) => {
             </div>
           </div>
         );
-      }) }
-    </div>
+      })
+      }
+    </div >
   );
 };
 

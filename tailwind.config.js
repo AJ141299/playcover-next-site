@@ -42,16 +42,23 @@ module.exports = {
       },
 
       animation: {
+        shiver: 'shiver 2.5s ease-in-out',
         fadeIn: 'fadeIn 3s ease-in-out',
+        fadeInSlow: 'fadeIn 7s ease-in-out',
         fadeInLeft: 'fadeInLeft 2.1s ease-out',
         fadeInRight: 'fadeInRight 2.1s ease-out',
         fadeInAbove: 'fadeInAbove 2.1s ease-out',
-        speedAboveEntranceNormal: 'speedAboveEntrance 0.7s ease-out',
+        speedAboveEntranceNormal: 'speedAboveEntrance 0.6s ease-out',
         speedAboveEntranceSlow: 'speedAboveEntrance 0.9s ease-out',
-        speedAboveEntranceSlowest: 'speedAboveEntrance 1.1s ease-out',
+        speedAboveEntranceSlowest: 'speedAboveEntrance 1s ease-out',
       },
 
       keyframes: {
+        shiver: {
+          '0%': { filter: "saturate(100%)" },
+          '50%': { filter: "saturate(170%)" },
+          '100%': { filter: "saturate(100%)" },
+        },
         fadeIn: {
           '0%': { opacity: "0%" },
           '60%': { opacity: "0%" },

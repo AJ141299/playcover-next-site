@@ -29,14 +29,14 @@ const Home = props => {
 
   return (
     <div className="pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
-      <h1 className="font-extrabold text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
+      <h1 className="font-extrabold sm:animate-shiver text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
         PlayCover
       </h1>
       <section className="pt-2">
         <p className="sm:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
           { t('hero_text') }
         </p>
-        <div className="flex space-x-5 pt-5">
+        <div className="flex justify-center space-x-5 pt-5">
           <a className="sm:animate-fadeInRight" href={ siliconDownloadLink }>
             <DownloadButton isActive={ true } text="Download for Apple Silicon" />
           </a>
