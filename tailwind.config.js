@@ -28,7 +28,7 @@ module.exports = {
       animation: {
         fadeInLeft: 'fadeInLeft 1s ease-out',
         fadeInRight: 'fadeInRight 0.9s ease-out',
-        fadeInAbove: 'fadeInAbove 0.8s ease-out',
+        fadeInAbove: 'fadeInAbove 1.1s ease-out',
       },
 
       keyframes: {
@@ -43,7 +43,7 @@ module.exports = {
           '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         fadeInAbove: {
-          '0%': { transform: 'translateY(40px)', opacity: "20%" },
+          '0%': { transform: 'translateY(25px)', opacity: "10%" },
           '40%': { opacity: "60%" },
           '100%': { transform: 'translateY(0px)', opacity: 1 },
         },

@@ -25,10 +25,10 @@ const ListChangelog = ({ gitData }) => {
             <div className="w-full border-b my-3 border-gray-500 fill-current"></div>
             <div className="flex space-x-2 mt-2 items-center">
               <a href={ data.assets[0].browser_download_url }>
-                <button className="text-sm px-4 py-1 bg-gray-700 dark:bg-gray-800 text-gray-200 dark:text-gray-300 hover:bg-black dark:hover:bg-gray-700 transition duration-200 rounded">Download</button>
+                <button className="text-sm px-4 py-1 bg-gray-700 dark:bg-gray-400 text-gray-200 dark:text-gray-900 hover:bg-black dark:hover:bg-gray-300 transition duration-200 rounded">Download</button>
               </a>
               <a href={ data.html_url } target="_blank">
-                <button className="text-sm px-4 py-1 bg-gray-700 dark:bg-gray-400 text-gray-200 dark:text-gray-900 hover:bg-black dark:hover:bg-gray-200 transition duration-200 rounded">GitHub</button>
+                <button className="text-sm px-4 py-1 bg-gray-700 dark:bg-gray-800 text-gray-200 dark:text-gray-300 hover:bg-black dark:hover:bg-gray-700  transition duration-200 rounded">GitHub</button>
               </a>
             </div>
           </div>
