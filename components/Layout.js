@@ -2,7 +2,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { useState } from 'react';
 import Contact from './Contact';
-import useScrollBlock from './hooks/useScrollBlock';
 import Playpass from './Playpass';
 import Head from 'next/head';
 
@@ -10,16 +9,15 @@ import Head from 'next/head';
 const Layout = props => {
   const [isContactOpen, setContactOpen] = useState(false);
   const [isPlaypassOpen, setPlaypassOpen] = useState(false);
-  const [blockScroll, allowScroll] = useScrollBlock();
 
   const toggleContact = () => {
     if (isContactOpen) {
       setContactOpen(false);
-      allowScroll();
+      // allowScroll();
       // document.body.style.overflow = "unset";
     } else {
       window.scrollTo(0, 0);
-      blockScroll();
+      // blockScroll();
       setContactOpen(true);
       // document.body.style.overflow = "hidden";
     }

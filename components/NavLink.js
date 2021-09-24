@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 
-const NavLink = ({ page, pageRoute }) => {
-  const router = useRouter();
+const NavLink = ({page, pageRoute}) => {
+  const router = useRouter ();
   const isActive = route => {
     if (route == router.pathname) {
       // active styles
@@ -13,14 +13,14 @@ const NavLink = ({ page, pageRoute }) => {
     }
   };
   return (
-    <Link href={ pageRoute }>
+    <Link href={pageRoute}>
       <a
         className={
           'transition duration-200 border-2 rounded-full ease-out ' +
-          isActive(pageRoute)
+            isActive (pageRoute)
         }
       >
-        { page }
+        {page}
       </a>
     </Link>
   );

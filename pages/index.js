@@ -1,82 +1,83 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import DownloadButton from '../components/DownloadButton';
 
-export default function Home() {
+export async function getStaticProps({ locale }) {
+  const response = await fetch(
+    'https://api.github.com/repos/iVoider/PlayCover/releases'
+  );
+  const gitHubData = await response.json();
+  return {
+    props: {
+      // ...(await serverSideTranslations(locale, ['Home'])),
+      gitHubData,
+    },
+    revalidate: 300,
+  };
+}
+
+const Home = props => {
+  const heroImageWidth = 1200;
+  const heroImageHeight = heroImageWidth / 1.9359;
+
+  // i18n
+  // const { t } = useTranslation('Home');
+
+
+  // set backup link
+  let siliconDownloadLink = 'https://github.com/iVoider/PlayCover/releases/latest';
+  // set latest link
+  try {
+    if (!props.gitHubData.message.includes("API rate limit exceeded")) {
+      siliconDownloadLink = props.gitHubData[0].assets[0].browser_download_url;
+    }
+  } catch {
+    if (props.gitHubData) {
+      siliconDownloadLink = props.gitHubData[0].assets[0].browser_download_url;
+    }
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-900 text-gray-200">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{ ' ' }
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{ ' ' }
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
+    <div className="pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
+      <h1 className="font-extrabold text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
+        PlayCover
+      </h1>
+      <section className="pt-2">
+        <p className="md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
+          Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support.
         </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
+        <div className="flex space-x-5 pt-5">
+          <a href={ siliconDownloadLink }>
+            <DownloadButton isActive={ true } text="Download for Apple Silicon" />
           </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
         </div>
-      </main>
+      </section>
+      <div className="pt-10">
+        <div className="hidden dark:flex rounded-lg shadow-md">
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{ ' ' }
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+          <Image
+            className="rounded-lg"
+            src="/assets/playcover-screenshot-dark.png"
+            alt="playcover app dark screenshot"
+            width={ heroImageWidth }
+            height={ heroImageHeight }
+            priority
+          />
+        </div>
+        <div className="flex dark:hidden shadow-md">
+          <Image
+            className="rounded-lg"
+            src="/assets/playcover-screenshot-light.png"
+            alt="playcover app light screenshot"
+            width={ heroImageWidth }
+            height={ heroImageHeight }
+            priority
+          />
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
