@@ -3,6 +3,22 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {
       colors: {
         gold: '#D2AC4A',
@@ -29,6 +45,7 @@ module.exports = {
         fadeInLeft: 'fadeInLeft 1s ease-out',
         fadeInRight: 'fadeInRight 0.9s ease-out',
         fadeInAbove: 'fadeInAbove 1.1s ease-out',
+        speedAboveEntrance: 'speedAboveEntrance 5s ease-out',
       },
 
       keyframes: {
@@ -44,6 +61,10 @@ module.exports = {
         },
         fadeInAbove: {
           '0%': { transform: 'translateY(40px)', opacity: "20%" },
+          '100%': { transform: 'translateY(0px)', opacity: 1 },
+        },
+        speedAboveEntrance: {
+          '0%': { transform: 'translateY(200px)', opacity: "20%" },
           '100%': { transform: 'translateY(0px)', opacity: 1 },
         },
       },
