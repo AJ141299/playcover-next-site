@@ -19,14 +19,33 @@ module.exports = {
         'body-dark': '#141516',
         'nav-footer': '#101011',
       },
+
       fontFamily: {
         sourceSansPro: "'Source Sans Pro', Arial, sans-serif;",
         openSans: "'Open Sans', Arial, sans-serif",
       },
+
+      animation: {
+        fadeInLeft: 'fadeInLeft 0.8s ease-out',
+        fadeInRight: 'fadeInRight 0.8s ease-out',
+      },
+
+      keyframes: {
+        fadeInLeft: {
+          '0%': { transform: 'translateX(60px)', opacity: "20%" },
+          '40%': { opacity: "60%" },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
+        fadeInRight: {
+          '0%': { transform: 'translateX(-60px)', opacity: "20%" },
+          '40%': { opacity: "60%" },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
+      },
     },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+    variants: {
+      extend: {},
+    },
+    plugins: [],
+  }
 };
