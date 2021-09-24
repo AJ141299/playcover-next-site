@@ -45,7 +45,7 @@ const Home = props => {
           <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
         </div>
       </section>
-      <div className="pt-10">
+      <div className="pt-10 animate-fadeInAbove">
         <div className="hidden dark:flex rounded-lg shadow-md">
           <Image
             className="rounded-lg"

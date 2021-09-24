@@ -26,20 +26,26 @@ module.exports = {
       },
 
       animation: {
-        fadeInLeft: 'fadeInLeft 0.8s ease-out',
-        fadeInRight: 'fadeInRight 0.8s ease-out',
+        fadeInLeft: 'fadeInLeft 1s ease-out',
+        fadeInRight: 'fadeInRight 0.9s ease-out',
+        fadeInAbove: 'fadeInAbove 0.8s ease-out',
       },
 
       keyframes: {
         fadeInLeft: {
-          '0%': { transform: 'translateX(60px)', opacity: "20%" },
+          '0%': { transform: 'translateX(30px)', opacity: "20%" },
           '40%': { opacity: "60%" },
           '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         fadeInRight: {
-          '0%': { transform: 'translateX(-60px)', opacity: "20%" },
+          '0%': { transform: 'translateX(-40px)', opacity: "20%" },
           '40%': { opacity: "60%" },
           '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
+        fadeInAbove: {
+          '0%': { transform: 'translateY(40px)', opacity: "20%" },
+          '40%': { opacity: "60%" },
+          '100%': { transform: 'translateY(0px)', opacity: 1 },
         },
       },
     },
