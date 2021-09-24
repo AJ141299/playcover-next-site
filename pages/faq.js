@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/Layout/PageHeading";
 
 const FAQ = () => {
 	return (

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import DownloadButton from '../components/DownloadButton';
+import DownloadButton from '../components/Buttons/DownloadButton';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 

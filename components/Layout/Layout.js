@@ -1,8 +1,8 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from '../Nav/Navbar';
+import Footer from '../Footer/Footer';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import Contact from './Contact';
-import Playpass from './Playpass';
+import Contact from '../Buttons/Contact';
+import Playpass from '../Buttons/Playpass';
 import Head from 'next/head';
 
 

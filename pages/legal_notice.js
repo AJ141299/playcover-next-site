@@ -1,5 +1,6 @@
 import Head from "next/head";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/Layout/PageHeading";
+
 
 const LegalNotice = () => {
 	return <div>

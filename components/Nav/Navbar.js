@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import NavLink from './NavLink';
-import LanguageSelector from './LanguageSelector';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const Navbar = ({ toggleContact, togglePlaypass }) => {
   // router for active page styling

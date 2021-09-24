@@ -1,5 +1,5 @@
-import ListChangelog from '../components/ListChangelog';
-import PageHeading from '../components/PageHeading';
+import ListChangelog from '../components/Changelog/ListChangelog';
+import PageHeading from '../components/Layout/PageHeading';
 
 export const getStaticProps = async () => {
 	const response = await fetch(
