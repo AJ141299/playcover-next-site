@@ -45,9 +45,9 @@ module.exports = {
         fadeInLeft: 'fadeInLeft 1s ease-out',
         fadeInRight: 'fadeInRight 0.9s ease-out',
         fadeInAbove: 'fadeInAbove 1.1s ease-out',
-        speedAboveEntranceNormal: 'speedAboveEntrance 0.8s ease-out',
-        speedAboveEntranceSlow: 'speedAboveEntrance 1s ease-out',
-        speedAboveEntranceSlowest: 'speedAboveEntrance 1.2s ease-out',
+        speedAboveEntranceNormal: 'speedAboveEntrance 0.7s ease-out',
+        speedAboveEntranceSlow: 'speedAboveEntrance 0.9s ease-out',
+        speedAboveEntranceSlowest: 'speedAboveEntrance 1.1s ease-out',
       },
 
       keyframes: {
