@@ -5,20 +5,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 
-export async function getStaticProps({ locale }) {
-  const response = await fetch(
-    'https://api.github.com/repos/iVoider/PlayCover/releases'
-  );
-  const gitHubData = await response.json();
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['Home'])),
-      gitHubData,
-    },
-    revalidate: 300,
-  };
-}
-
 const Home = props => {
   const heroImageWidth = 1200;
   const heroImageHeight = heroImageWidth / 1.9359;
@@ -26,17 +12,20 @@ const Home = props => {
   // i18n
   const { t } = useTranslation('Home');
 
-
   // set backup link
   let siliconDownloadLink = 'https://github.com/iVoider/PlayCover/releases/latest';
-  // set latest link
+  // try latest link
   try {
     if (!props.gitHubData.message.includes("API rate limit exceeded")) {
       siliconDownloadLink = props.gitHubData[0].assets[0].browser_download_url;
+    } else {
+      console.log("Download link API not working!");
     }
   } catch {
     if (props.gitHubData) {
       siliconDownloadLink = props.gitHubData[0].assets[0].browser_download_url;
+    } else {
+      console.log("Download link API not working!");
     }
   }
 
@@ -81,5 +70,19 @@ const Home = props => {
     </div>
   );
 };
+
+export async function getStaticProps({ locale }) {
+  const response = await fetch(
+    'https://api.github.com/repos/iVoider/PlayCover/releases'
+  );
+  const gitHubData = await response.json();
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['Home'])),
+      gitHubData,
+    },
+    revalidate: 300,
+  };
+}
 
 export default Home;
