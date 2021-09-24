@@ -42,10 +42,10 @@ module.exports = {
       },
 
       animation: {
-        fadeIn: 'fadeIn 1s ease-out',
-        fadeInLeft: 'fadeInLeft 2s ease-out',
-        fadeInRight: 'fadeInRight 2s ease-out',
-        fadeInAbove: 'fadeInAbove 2s ease-out',
+        fadeIn: 'fadeIn 3s ease-in-out',
+        fadeInLeft: 'fadeInLeft 2.1s ease-out',
+        fadeInRight: 'fadeInRight 2.1s ease-out',
+        fadeInAbove: 'fadeInAbove 2.1s ease-out',
         speedAboveEntranceNormal: 'speedAboveEntrance 0.7s ease-out',
         speedAboveEntranceSlow: 'speedAboveEntrance 0.9s ease-out',
         speedAboveEntranceSlowest: 'speedAboveEntrance 1.1s ease-out',
