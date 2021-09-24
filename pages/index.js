@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import DownloadButton from '../components/DownloadButton';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 
 export async function getStaticProps({ locale }) {
   const response = await fetch(
@@ -9,7 +12,7 @@ export async function getStaticProps({ locale }) {
   const gitHubData = await response.json();
   return {
     props: {
-      // ...(await serverSideTranslations(locale, ['Home'])),
+      ...(await serverSideTranslations(locale, ['Home'])),
       gitHubData,
     },
     revalidate: 300,
@@ -21,7 +24,7 @@ const Home = props => {
   const heroImageHeight = heroImageWidth / 1.9359;
 
   // i18n
-  // const { t } = useTranslation('Home');
+  const { t } = useTranslation('Home');
 
 
   // set backup link
@@ -44,7 +47,7 @@ const Home = props => {
       </h1>
       <section className="pt-2">
         <p className="md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
-          Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support.
+          { t('hero_text') }
         </p>
         <div className="flex space-x-5 pt-5">
           <a href={ siliconDownloadLink }>
@@ -55,7 +58,6 @@ const Home = props => {
       </section>
       <div className="pt-10">
         <div className="hidden dark:flex rounded-lg shadow-md">
-
           <Image
             className="rounded-lg"
             src="/assets/playcover-screenshot-dark.png"
