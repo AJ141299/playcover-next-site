@@ -21,7 +21,7 @@ const ListChangelog = ({ gitData }) => {
       { gitData.map((data) => {
         return (
           <div className="first:text-pink-500 text-gray-700 dark:text-gray-400 mb-10 w-[75%] " key={ data.id }>
-            <h1 className="font-semibold text-2xl">{ data.tag_name } <span className="ml-2 text-lg font-normal">({ gitData[0].published_at.split('T')[0] })</span></h1>
+            <h1 className="font-semibold text-2xl">{ data.tag_name } <span className="ml-2 text-lg font-normal">({ data.published_at.split('T')[0] })</span></h1>
             <div className="">
               <ChangelogParser data={ data } />
             </div>
