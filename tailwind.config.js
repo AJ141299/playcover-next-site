@@ -42,27 +42,34 @@ module.exports = {
       },
 
       animation: {
-        fadeInLeft: 'fadeInLeft 1s ease-out',
-        fadeInRight: 'fadeInRight 0.9s ease-out',
-        fadeInAbove: 'fadeInAbove 1.1s ease-out',
+        fadeIn: 'fadeIn 1s ease-out',
+        fadeInLeft: 'fadeInLeft 2s ease-out',
+        fadeInRight: 'fadeInRight 2s ease-out',
+        fadeInAbove: 'fadeInAbove 2s ease-out',
         speedAboveEntranceNormal: 'speedAboveEntrance 0.7s ease-out',
         speedAboveEntranceSlow: 'speedAboveEntrance 0.9s ease-out',
         speedAboveEntranceSlowest: 'speedAboveEntrance 1.1s ease-out',
       },
 
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: "0%" },
+          '60%': { opacity: "0%" },
+          '100%': { opacity: "100%" },
+        },
         fadeInLeft: {
-          '0%': { transform: 'translateX(30px)', opacity: "20%" },
-          '40%': { opacity: "60%" },
+          '0%': { transform: 'translateX(200px)', opacity: "0%" },
+          '30%': { transform: 'translateX(20px)', opacity: "80%" },
           '100%': { transform: 'translateX(0px)', opacity: "100%" },
         },
         fadeInRight: {
-          '0%': { transform: 'translateX(-40px)', opacity: "20%" },
-          '40%': { opacity: "60%" },
+          '0%': { transform: 'translateX(-200px)', opacity: "0%" },
+          '30%': { transform: 'translateX(-20px)', opacity: "80%" },
           '100%': { transform: 'translateX(0px)', opacity: "100%" },
         },
         fadeInAbove: {
-          '0%': { transform: 'translateY(40px)', opacity: "20%" },
+          '0%': { transform: 'translateY(200px)', opacity: "0%" },
+          '30%': { transform: 'translateY(20px)', opacity: "80%" },
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
         },
         speedAboveEntrance: {

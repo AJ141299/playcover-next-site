@@ -33,14 +33,16 @@ const Home = props => {
         PlayCover
       </h1>
       <section className="pt-2">
-        <p className="md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
+        <p className="animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
           { t('hero_text') }
         </p>
         <div className="flex space-x-5 pt-5">
-          <a href={ siliconDownloadLink }>
+          <a className="animate-fadeInRight" href={ siliconDownloadLink }>
             <DownloadButton isActive={ true } text="Download for Apple Silicon" />
           </a>
-          <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
+          <div className="animate-fadeInLeft">
+            <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
+          </div>
         </div>
       </section>
       <div className="backface-off pt-10">
