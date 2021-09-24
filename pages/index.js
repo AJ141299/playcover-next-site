@@ -43,8 +43,8 @@ const Home = props => {
           <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
         </div>
       </section>
-      <div className="pt-10 animate-fadeInAbove">
-        <div className="hidden dark:flex rounded-lg shadow-md">
+      <div className="backface-off pt-10">
+        <div className="backface-off hidden dark:flex rounded-lg shadow-md md:animate-fadeInAbove">
           <Image
             className="rounded-lg"
             src="/assets/playcover-screenshot-dark.png"
@@ -54,7 +54,7 @@ const Home = props => {
             priority
           />
         </div>
-        <div className="flex dark:hidden shadow-md">
+        <div className="backface-off flex dark:hidden shadow-md md:animate-fadeInAbove">
           <Image
             className="rounded-lg"
             src="/assets/playcover-screenshot-light.png"

@@ -9,6 +9,7 @@ import Head from 'next/head';
 const Layout = props => {
   const [isContactOpen, setContactOpen] = useState(null);
   const [isPlaypassOpen, setPlaypassOpen] = useState(null);
+  const [hideScrolls, setHideScrolls] = useState(null);
 
   const toggleContact = () => {
     if (isContactOpen) {
@@ -19,13 +20,13 @@ const Layout = props => {
   };
 
   useEffect(() => {
-    if (isContactOpen || isPlaypassOpen) {
+    if (hideScrolls) {
       document.querySelector('body').classList.toggle('overflow-hidden');
       window.scrollTo(0, 0);
-    } else if (isContactOpen === false || isPlaypassOpen === false) {
+    } else if (hideScrolls === false) {
       document.querySelector('body').classList.toggle('overflow-hidden');
     }
-  }, [isContactOpen, isPlaypassOpen]);
+  }, [hideScrolls]);
 
   const togglePlaypass = () => {
     if (isPlaypassOpen) {

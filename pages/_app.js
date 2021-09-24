@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css';
+import '../css/styles.css';
 import Layout from '../components/Layout/Layout';
 import { appWithTranslation } from 'next-i18next';
 
