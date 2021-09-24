@@ -5,7 +5,7 @@ const ListChangelog = ({ gitData }) => {
   try {
     if (gitData.message.includes("API rate limit exceeded")) {
       gitData = require("../public/backup/changelog.json");
-      console.log("Changelog API not working!");
+      console.log("Changelog API rate limit exceeded!");
     }
   } catch {
     if (!gitData) {

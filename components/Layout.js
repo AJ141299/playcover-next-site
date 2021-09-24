@@ -1,38 +1,37 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Contact from './Contact';
 import Playpass from './Playpass';
 import Head from 'next/head';
 
 
 const Layout = props => {
-  const [isContactOpen, setContactOpen] = useState(false);
-  const [isPlaypassOpen, setPlaypassOpen] = useState(false);
+  const [isContactOpen, setContactOpen] = useState(null);
+  const [isPlaypassOpen, setPlaypassOpen] = useState(null);
 
   const toggleContact = () => {
     if (isContactOpen) {
       setContactOpen(false);
-      // allowScroll();
-      // document.body.style.overflow = "unset";
     } else {
-      window.scrollTo(0, 0);
-      // blockScroll();
       setContactOpen(true);
-      // document.body.style.overflow = "hidden";
     }
   };
+
+  useEffect(() => {
+    if (isContactOpen || isPlaypassOpen) {
+      document.querySelector('body').classList.toggle('overflow-hidden');
+      window.scrollTo(0, 0);
+    } else if (isContactOpen === false || isPlaypassOpen === false) {
+      document.querySelector('body').classList.toggle('overflow-hidden');
+    }
+  }, [isContactOpen, isPlaypassOpen]);
 
   const togglePlaypass = () => {
     if (isPlaypassOpen) {
       setPlaypassOpen(false);
-      allowScroll();
-      // document.body.style.overflow = "unset";
     } else {
-      window.scrollTo(0, 0);
-      blockScroll();
       setPlaypassOpen(true);
-      // document.body.style.overflow = "hidden";
     }
   };
 

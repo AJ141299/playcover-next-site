@@ -19,7 +19,7 @@ const Home = props => {
     if (!props.gitHubData.message.includes("API rate limit exceeded")) {
       siliconDownloadLink = props.gitHubData[0].assets[0].browser_download_url;
     } else {
-      console.log("Download link API not working!");
+      console.log("Download link API rate limit exceeded!");
     }
   } catch {
     if (props.gitHubData) {
