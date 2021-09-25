@@ -4,7 +4,7 @@ import { RiCloseFill } from "react-icons/ri";
 const MobileNav = ({ toggleMenu, isOpen }) => {
   return (
     <div className="select-none">
-      <nav className={ 'absolute h-[100vh] w-[100vw] bg-body dark:bg-body-dark z-30 pt-32 text-2xl transition duration-300 ease-in-out transform ' + (isOpen ? ' translate-y-[0] ' : ' -translate-y-full ') + (isOpen ? 'opacity-100' : 'opacity-0') }>
+      <nav className={ 'absolute h-[100vh] w-[100vw] bg-body dark:bg-body-dark z-30 pt-32 text-xl transition duration-200 ease-in-out transform ' + (isOpen ? ' translate-y-[0] ' : ' -translate-y-full ') + (isOpen ? 'opacity-100' : 'opacity-0') }>
         <div onClick={ toggleMenu } className="absolute top-5 right-11 cursor-pointer">
           <RiCloseFill size="40px" />
         </div>
