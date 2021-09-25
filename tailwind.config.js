@@ -46,6 +46,8 @@ module.exports = {
         fadeIn: 'fadeIn 2.5s ease-in-out',
         fadeInSlow: 'fadeIn 7s ease-in-out',
         fadeInLeft: 'fadeInLeft 2s ease-out',
+        fadeInLeftFaster: 'fadeInLeft 1.5s ease-out',
+        fadeInRightFaster: 'fadeInRight 1.5s ease-out',
         fadeInRight: 'fadeInRight 2s ease-out',
         fadeInAbove: 'fadeInAbove 2s ease-out',
         speedAboveEntranceNormal: 'speedAboveEntrance 0.6s ease-out',
