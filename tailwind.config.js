@@ -83,7 +83,6 @@ module.exports = {
         },
         speedAboveEntrance: {
           '0%': { transform: 'translateY(150px)', opacity: "0%" },
-          '30%': { transform: 'translateY(150px)', opacity: "0%" },
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
         },
         slideUp: {
