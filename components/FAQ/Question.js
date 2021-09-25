@@ -45,11 +45,11 @@ const Question = ({ question, children }) => {
     </section>
 
     {/* answer */ }
-    <section>
+    <section className="w-[60vw]">
       { questionOpen && children }
     </section>
 
-    {/* only for searching/filtering */ }
+    {/* DO NOT TOUCH | for searching/filtering */ }
     <section className="hidden">
       { children }
     </section>
