@@ -3,7 +3,7 @@
 }
 
 /* prevents content shifting when vertical scroll bar appears/disappears */
-html {
+body {
   overflow-y: overlay;
 
   /* fixes mobile nav bar extending width */
