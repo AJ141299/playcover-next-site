@@ -29,24 +29,24 @@ const Home = props => {
 
   return (
     <div className="pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
-      <h1 className="font-extrabold sm:animate-shiver text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
+      <h1 className="font-extrabold animate-shiver text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
         PlayCover
       </h1>
       <section className="pt-2">
-        <h2 className="sm:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
+        <h2 className="lg:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
           { t('hero_text') }
         </h2>
         <div className="flex justify-center space-x-5 pt-5">
-          <a className="sm:animate-fadeInRight" href={ siliconDownloadLink }>
+          <a className="lg:animate-fadeInRight" href={ siliconDownloadLink }>
             <DownloadButton isActive={ true } text="Download for Apple Silicon" />
           </a>
-          <div className="sm:animate-fadeInLeft">
+          <div className="lg:animate-fadeInLeft">
             <DownloadButton isActive={ false } text="Coming Soon for intel mac" />
           </div>
         </div>
       </section>
       <div className="backface-off pt-10">
-        <div className="backface-off hidden dark:flex rounded-lg shadow-md md:animate-fadeInAbove">
+        <div className="backface-off hidden dark:flex rounded-lg shadow-md lg:animate-fadeInAbove">
           <Image
             className="rounded-lg"
             src="/assets/playcover-screenshot-dark.png"
@@ -56,7 +56,7 @@ const Home = props => {
             priority
           />
         </div>
-        <div className="backface-off flex dark:hidden shadow-md md:animate-fadeInAbove">
+        <div className="backface-off flex dark:hidden shadow-md lg:animate-fadeInAbove">
           <Image
             className="rounded-lg"
             src="/assets/playcover-screenshot-light.png"
