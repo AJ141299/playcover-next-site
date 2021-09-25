@@ -14,25 +14,29 @@ const Layout = props => {
   const toggleContact = () => {
     if (isContactOpen) {
       setContactOpen(false);
+      setHideScrolls(false);
     } else {
       setContactOpen(true);
+      setHideScrolls(true);
     }
   };
 
   useEffect(() => {
     if (hideScrolls) {
-      document.querySelector('body').classList.toggle('overflow-hidden');
+      document.querySelector('html').classList.toggle('overflow-hidden');
       window.scrollTo(0, 0);
     } else if (hideScrolls === false) {
-      document.querySelector('body').classList.toggle('overflow-hidden');
+      document.querySelector('html').classList.toggle('overflow-hidden');
     }
   }, [hideScrolls]);
 
   const togglePlaypass = () => {
     if (isPlaypassOpen) {
       setPlaypassOpen(false);
+      setHideScrolls(false);
     } else {
       setPlaypassOpen(true);
+      setHideScrolls(true);
     }
   };
 
