@@ -6,3 +6,8 @@
 html {
   overflow-y: overlay;
 }
+
+/* fixes long links extending the page width on mobile such as on changelog page */
+body {
+  overflow-wrap: break-word;
+}
