@@ -33,9 +33,9 @@ const Home = props => {
         PlayCover
       </h1>
       <section className="pt-2">
-        <p className="sm:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
+        <h2 className="sm:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
           { t('hero_text') }
-        </p>
+        </h2>
         <div className="flex justify-center space-x-5 pt-5">
           <a className="sm:animate-fadeInRight" href={ siliconDownloadLink }>
             <DownloadButton isActive={ true } text="Download for Apple Silicon" />

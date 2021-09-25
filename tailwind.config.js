@@ -43,7 +43,7 @@ module.exports = {
 
       animation: {
         shiver: 'shiver 2.5s ease-in-out',
-        fadeIn: 'fadeIn 2.9s ease-in-out',
+        fadeIn: 'fadeIn 2.7s ease-in-out',
         fadeInSlow: 'fadeIn 7s ease-in-out',
         fadeInLeft: 'fadeInLeft 2.2s ease-out',
         fadeInRight: 'fadeInRight 2.2s ease-out',

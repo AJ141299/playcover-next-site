@@ -41,7 +41,7 @@ const Navbar = ({ toggleContact, togglePlaypass }) => {
   }, []);
 
   return (
-    <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] text-[1.05rem] font-semibold text-center text-gray-700 dark:text-gray-200 z-10 transition duration-300 ease-out">
+    <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
       <div className="flex justify-between px-10">
         {/* primary */ }
         <section className="flex space-x-9">

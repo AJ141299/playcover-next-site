@@ -1,15 +1,22 @@
 import Head from "next/head";
+import FaqQuestions from "../components/FAQ/FaqQuestions";
 import PageHeading from "../components/Layout/PageHeading";
 
 const FAQ = () => {
 	return (
 		<div>
+			{/* page heading */ }
 			<span className="hidden lg:block">
 				<PageHeading text="Frequently Asked Questions" />
 			</span>
 			<span className="lg:hidden">
 				<PageHeading text="FAQ" overwriteStyles="text-5xl font-bold" />
 			</span>
+
+			{/* data */ }
+			<FaqQuestions />
+
+			{/* placeholder */ }
 			<p className="px-20 text-gray-600">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nulla earum ratione quibusdam, ea voluptas, libero illum amet est eius corrupti. Inventore architecto repudiandae totam itaque quis doloremque natus in quasi ex animi veniam quaerat vel distinctio minima ipsa veritatis quos voluptatum, aliquam ea blanditiis amet ad illo, commodi accusamus. Rerum, quo voluptates assumenda explicabo iste doloremque corporis dignissimos sunt, magnam officiis error non. Eos, est mollitia? Explicabo autem similique quis dignissimos asperiores, enim blanditiis sint rerum praesentium error quisquam minus molestiae quia doloribus aliquid officia illum vero distinctio consectetur labore harum accusamus tempore sequi ipsam. Ad, nulla? Repellendus est consectetur animi soluta architecto sit consequatur eaque molestias qui, consequuntur earum, nobis fuga, totam voluptatum labore. Vero quas eveniet cupiditate, enim dolores, quos in architecto iure ullam error impedit et doloremque, saepe maiores dolor temporibus voluptates. Autem, animi aliquam delectus quia reprehenderit earum eaque aliquid ea architecto tenetur eveniet, nostrum sunt illum deleniti doloremque? Incidunt et corrupti at, commodi earum ipsam eum eius natus fuga sapiente sunt aspernatur veniam labore accusantium quas enim excepturi assumenda omnis culpa exercitationem, ipsa autem ab quibusdam. Animi quo facilis velit sunt, fugit debitis perferendis similique aspernatur asperiores consectetur aliquid et, ratione, totam maxime quibusdam consequuntur a. Hic facilis accusamus maiores, vitae amet earum aspernatur. Quas voluptates consectetur recusandae non voluptatibus voluptatem in, dicta nisi ea eligendi quidem necessitatibus saepe nemo distinctio aut nesciunt? Atque eligendi iusto neque, iste quidem dignissimos? Blanditiis alias accusamus consequatur omnis consequuntur perspiciatis fugiat officiis sit, dolor ratione velit nobis sequi nostrum minus atque nesciunt? Asperiores aliquam pariatur dolor odio corrupti
 				porro corporis? Esse atque ad sapiente at, vitae facilis, nemo repudiandae amet, aliquam dolorem ipsum ex quibusdam numquam minus. Suscipit atque nihil magni, delectus consequatur illum totam dolor culpa error corporis unde saepe amet, sunt deleniti, repudiandae natus nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestias cum rem, iure consequuntur cupiditate voluptatibus maxime. Cumque molestias nobis rerum voluptatum. Quod aut aperiam nisi sit? Pariatur, iusto. Nihil harum unde minus, consectetur velit, nemo voluptatem numquam provident saepe praesentium vel voluptate fugit dolorem ad molestiae illo alias aspernatur maiores blanditiis facilis veritatis suscipit. Laudantium rem alias expedita placeat iure quis, provident nemo voluptates adipisci sequi iusto veniam cum molestias quo consequatur quaerat dignissimos ipsam numquam excepturi ducimus doloremque, illum temporibus inventore! At hic quidem molestiae ipsam cum? Voluptatum est fugiat alias animi maiores cupiditate rerum, blanditiis minima odio corrupti, itaque et quae amet delectus reprehenderit, tenetur expedita accusantium possimus nesciunt atque aspernatur dolorem ex mollitia repudiandae. Sit optio atque veniam exercitationem nulla sapiente iusto, fugiat laborum assumenda architecto esse? Iusto, placeat quas! Eos aliquid non reprehenderit? Cupiditate molestiae suscipit doloremque id amet consectetur fuga dolore accusantium nulla! Quos explicabo quasi esse magni fuga, id quibusdam temporibus, sed nihil animi adipisci doloribus! A voluptatibus eum ad itaque, laudantium iure consequuntur modi ipsum aliquam vitae nulla. Quam error aliquid debitis cupiditate nam, asperiores omnis quisquam? Nisi, illum quo quidem animi dolorum, similique dignissimos et quibusdam inventore porro officiis est natus. Excepturi magnam iusto rem ea nihil veritatis dignissimos nisi, sed voluptatibus error nesciunt aliquam at illo, laboriosam praesentium! Consequuntur, explicabo veritatis sed vel vitae
