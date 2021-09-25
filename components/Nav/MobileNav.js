@@ -6,7 +6,7 @@ const MobileNav = ({ toggles, isOpen }) => {
 
   return (
     <div className="relative">
-      <nav className={ 'select-none absolute h-[100vh] w-[50vw] sm:w-[27vw] right-0 bg-body dark:bg-nav-footer z-30 pt-32 text-xl transition duration-200 ease-in-out transform ' + (isOpen ? ' translate-y-[0] ' : ' -translate-y-full ') }>
+      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] right-0 bg-body dark:bg-nav-footer z-30 pt-32 text-xl transition duration-200 ease-in-out transform ' + (isOpen ? ' translate-y-[0] ' : ' -translate-y-full ') }>
         {/* close button */ }
         <div onClick={ toggleMenu } className="absolute top-5 right-7 md:right-11 cursor-pointer">
           <RiCloseFill size="35px" />

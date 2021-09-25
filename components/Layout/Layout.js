@@ -9,6 +9,7 @@ import Head from 'next/head';
 const Layout = props => {
   const [isContactOpen, setContactOpen] = useState(null);
   const [isPlaypassOpen, setPlaypassOpen] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(null);
   const [hideScrolls, setHideScrolls] = useState(null);
 
   const toggleContact = () => {
@@ -47,7 +48,7 @@ const Layout = props => {
       <Head>
       </Head>
       <div className="flex flex-col h-[100vh]">
-        <Navbar setHideScrolls={ setHideScrolls } toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
+        <Navbar setMobileMenuOpen={ setMobileMenuOpen } mobileMenuOpen={ mobileMenuOpen } setHideScrolls={ setHideScrolls } toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
 
         <main>
           { isPlaypassOpen && <Playpass togglePlaypass={ togglePlaypass } /> }

@@ -7,7 +7,7 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileNav from './MobileNav';
 
-const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
+const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen, setMobileMenuOpen }) => {
   // router for active page styling
   const router = useRouter();
   const isActive = route => {
@@ -20,7 +20,6 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
     }
   };
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(null);
 
   const toggleMobileMenu = () => {
     if (mobileMenuOpen) {
@@ -32,7 +31,6 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      setHideScrolls(true);
       // auto closes mobile menu on xl screen and larger
       window.addEventListener('resize', () => {
         if (window.screen.width > 1280) {
@@ -42,7 +40,6 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
         }
       });
     } else if (mobileMenuOpen === false) {
-      setHideScrolls(false);
     }
   }, [mobileMenuOpen]);
 
