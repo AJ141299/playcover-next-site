@@ -37,7 +37,7 @@ const FaqQuestions = () => {
         </div>
 
         {/* questions list */ }
-        <section className="flex flex-col space-y-5 animate-fadeInLeftFaster">
+        <section className="flex flex-col space-y-5 lg:animate-fadeInLeftFaster">
           <Question question="Question test">
             <Keybindings />
           </Question>
