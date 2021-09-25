@@ -31,7 +31,7 @@ const Question = ({ question, children }) => {
     }
   }, [questionOpen]);
 
-  return (<div className="flex flex-col items-center space-y-10">
+  return (<div className="question flex flex-col items-center space-y-7">
     {/* question */ }
     <section className={ questionStyles } onClick={ openQuestion }>
       <div className="flex select-none justify-between w-full items-center">
@@ -47,6 +47,11 @@ const Question = ({ question, children }) => {
     {/* answer */ }
     <section>
       { questionOpen && children }
+    </section>
+
+    {/* only for searching/filtering */ }
+    <section className="hidden">
+      { children }
     </section>
   </div>);
 };
