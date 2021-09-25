@@ -44,18 +44,22 @@ const Team = () => {
 			<PageHeading text="Team" replaceBottomPadding="pb-12" />
 
 			<div className="flex justify-center pb-6">
-				<div className="shadow-md w-[85%] md:w-[55%] rounded-lg  bg-gray-200 dark:bg-[#222222] transition duration-200 ease-in-out">
-					<div className="p-4 md:p-10 space-y-5 flex flex-col transition duration-[1200ms] ease-out">
+				<div className="shadow-md w-[85%] md:w-[55%] rounded-lg  bg-gray-200 dark:bg-[#222222] transition duration-200 ease-in-out sm:animate-slideUp">
+					<div className="p-4 md:p-10 space-y-5 flex flex-col ease-out sm:animate-fadeSlideUp">
 						<ListTeam icon={ <IoCodeSlashSharp size="25px" /> } role="Creator" name="iVoider" email="business@playcover.me" />
 						<ListTeam icon={ <HiOutlineDesktopComputer size="25px" /> } role="Website" name="AJ and Hades" email="AJ@playcover.me" />
 						<ListTeam icon={ <IoIosPeople size="25px" /> } role="Discord Community Manager" name="Sloooopie" />
 						<ListTeam icon={ <CgIfDesign size="25px" /> } role="Logo" name="Artemiy" />
+
+						{/* translators */ }
 						<div>
 							<ListTeam icon={ <HiOutlineTranslate size="25px" /> } role="Translation Services" />
 							<div className="pl-9 pt-1">
 								<ListTranslators data={ translateTeam } />
 							</div>
 						</div>
+
+						{/* special thanks */ }
 						<div>
 							<ListTeam icon={ <FaRegHeart size="25px" /> } role="Special thanks to..." name="" />
 							<div className="pl-9 pt-1">

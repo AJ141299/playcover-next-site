@@ -48,9 +48,11 @@ module.exports = {
         fadeInLeft: 'fadeInLeft 2s ease-out',
         fadeInRight: 'fadeInRight 2s ease-out',
         fadeInAbove: 'fadeInAbove 2s ease-out',
-        speedAboveEntranceNormal: 'speedAboveEntrance 0.8s ease-out',
-        speedAboveEntranceSlow: 'speedAboveEntrance 1.1s ease-out',
-        speedAboveEntranceSlowest: 'speedAboveEntrance 1.3s ease-out',
+        speedAboveEntranceNormal: 'speedAboveEntrance 0.6s ease-out',
+        speedAboveEntranceSlow: 'speedAboveEntrance 0.8s ease-out',
+        speedAboveEntranceSlowest: 'speedAboveEntrance 0.9s ease-out',
+        slideUp: 'slideUp 1.5s ease-out',
+        fadeSlideUp: 'fadeSlideUp 2.2s ease-out',
       },
 
       keyframes: {
@@ -80,8 +82,18 @@ module.exports = {
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
         },
         speedAboveEntrance: {
-          '0%': { transform: 'translateY(130px)', opacity: "0%" },
-          '40%': { transform: 'translateY(130px)', opacity: "0%" },
+          '0%': { transform: 'translateY(150px)', opacity: "0%" },
+          '30%': { transform: 'translateY(150px)', opacity: "0%" },
+          '100%': { transform: 'translateY(0px)', opacity: "100%" },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(80px)' },
+          '30%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
+        fadeSlideUp: {
+          '0%': { transform: 'translateY(100px)', opacity: "0%" },
+          '30%': { transform: 'translateY(-10px)', opacity: "40%" },
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
         },
       },
