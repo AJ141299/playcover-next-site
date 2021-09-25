@@ -43,7 +43,7 @@ const MobileNav = ({ toggles, isOpen }) => {
             <button onClick={ () => {
               toggleMenu();
               setTimeout(togglePlayPass, 400);
-            } } className="rounded-full px-4 py-2 dark:bg-gray-200 font-semibold text-center text-gray-800">Get Playpass</button>
+            } } className="rounded-full px-4 py-2 bg-gray-700 dark:bg-gray-200 font-semibold text-center text-gray-200  dark:text-gray-800">Get Playpass</button>
           </div>
         </div>
 
