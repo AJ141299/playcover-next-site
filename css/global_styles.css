@@ -8,9 +8,13 @@ body {
 
   /* fixes mobile nav bar extending width */
   overflow-x:hidden;
+
+  /* fixes long links extending the page width on mobile such as on changelog page */
+  overflow-wrap: break-word;
+
+/* removes highlight of button press on mobile */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-display: optional;
+
 }
 
-/* fixes long links extending the page width on mobile such as on changelog page */
-body {
-  overflow-wrap: break-word;
-}

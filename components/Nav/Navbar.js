@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import NavLink from './NavLink';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
-import { AiOutlineMenu } from "react-icons/ai";
+import { RiCloseFill } from "react-icons/ri";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import MobileNav from './MobileNav';
 
@@ -44,9 +44,8 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
     }
   }, [mobileMenuOpen]);
 
-  // nav scrolling animation and show/hide mobile button
+  // nav scrolling animation
   useEffect(() => {
-    // scrolling animation
     const navBar = document.querySelector('nav');
     window.addEventListener('scroll', e => {
       if (window.screen.width > 1280) {
@@ -128,16 +127,20 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
             </button>
             <LanguageSelector />
           </section>
-
-
         </div>
       </nav>
 
       {/* mobile nav toggle button */ }
-      <button onClick={ toggleMobileMenu } className="xl:hidden fixed rounded-full bg-white shadow-lg dark:bg-nav-footer px-[20px] py-[7px] bottom-[40px] right-[35px]">
+      <button onClick={ toggleMobileMenu } className="xl:hidden fixed rounded-full bg-white shadow-lg dark:bg-nav-footer p-9 bottom-[40px] right-[35px] transition duration-300 z-50">
         <div className="flex flex-col rounded-full">
-          <MdKeyboardArrowUp size="25px" color="#E23B8B" />
-          <MdKeyboardArrowDown size="25px" color="#E23B8B" />
+          <div className={ "absolute top-[18%] right-[33%] transition duration-300" + (mobileMenuOpen ? ' opacity-0 ' : ' opacity-100 ') }>
+            <MdKeyboardArrowUp size="25px" color="#E23B8B" />
+            <MdKeyboardArrowDown size="25px" color="#E23B8B" />
+          </div>
+
+          <div className={ "absolute top-[25%] right-[25%] transition duration-300" + (mobileMenuOpen ? ' opacity-100 ' : ' opacity-0 ') }>
+            <RiCloseFill size="35px" color="#E23B8B" />
+          </div>
         </div>
       </button>
 
