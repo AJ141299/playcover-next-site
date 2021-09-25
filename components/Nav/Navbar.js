@@ -118,7 +118,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
       </nav>
 
       {/* mobile nav */ }
-      { mobileMenuOpen && <MobileNav /> }
+      <MobileNav isOpen={ mobileMenuOpen } toggleMenu={ toggleMobileMenu } />
     </>
   );
 };
