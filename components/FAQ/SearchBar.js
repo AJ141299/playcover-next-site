@@ -6,7 +6,7 @@ const SearchBar = ({ setSearchTerm }) => {
       <div className="pr-2">
         <IoMdSearch size="18px" color="#9DA3AE" />
       </div>
-      <input onInput={ (e) => { setSearchTerm(e.target.value.toLowerCase()); } } className="w-full outline-none bg-transparent" type="text" placeholder="Search..." />
+      <input onInput={ (e) => { setSearchTerm(e.target.value.toLowerCase()); } } className="h-full w-full outline-none bg-transparent" type="text" placeholder="Search..." />
     </div>
   </div>);
 };
