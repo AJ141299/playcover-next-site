@@ -43,7 +43,6 @@ const Layout = props => {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/assets/favicon.ico" />
       </Head>
       <div className="flex flex-col h-[100vh]">
         <Navbar toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
