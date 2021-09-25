@@ -59,7 +59,7 @@ module.exports = {
       keyframes: {
         shiver: {
           '0%': { filter: "saturate(100%)" },
-          '45%': { filter: "saturate(170%)" },
+          '45%': { filter: "saturate(150%)" },
           '75%': { filter: "saturate(80%)" },
           '100%': { filter: "saturate(100%)" },
         },
