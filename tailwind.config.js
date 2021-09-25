@@ -42,7 +42,7 @@ module.exports = {
       },
 
       animation: {
-        shiver: 'shiver 2.5s ease-in-out',
+        shiver: 'shiver 2.5s ease-in-out infinite',
         fadeIn: 'fadeIn 2.5s ease-in-out',
         fadeInSlow: 'fadeIn 7s ease-in-out',
         fadeInLeft: 'fadeInLeft 2s ease-out',
@@ -53,12 +53,14 @@ module.exports = {
         speedAboveEntranceSlowest: 'speedAboveEntrance 0.9s ease-out',
         slideUp: 'slideUp 1.5s ease-out',
         fadeSlideUp: 'fadeSlideUp 2.2s ease-out',
+        scaleUp: 'scaleUp 0.7s ease-out',
       },
 
       keyframes: {
         shiver: {
           '0%': { filter: "saturate(100%)" },
-          '50%': { filter: "saturate(170%)" },
+          '45%': { filter: "saturate(170%)" },
+          '75%': { filter: "saturate(80%)" },
           '100%': { filter: "saturate(100%)" },
         },
         fadeIn: {
@@ -94,6 +96,10 @@ module.exports = {
           '0%': { transform: 'translateY(100px)', opacity: "0%" },
           '30%': { transform: 'translateY(-10px)', opacity: "40%" },
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
+        },
+        scaleUp: {
+          '0%': { transform: 'scale(0.5)', opacity: "0%" },
+          '100%': { transform: 'scale(1)', opacity: "100%" },
         },
       },
     },

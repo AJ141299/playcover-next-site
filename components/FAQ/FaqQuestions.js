@@ -34,11 +34,12 @@ const FaqQuestions = () => {
     <div className="flex justify-center">
 
       <div className="flex flex-col space-y-12">
+        <div className="animate-fadeInRight">
+          <SearchBar setSearchTerm={ setSearchTerm } />
+        </div>
 
-        <SearchBar setSearchTerm={ setSearchTerm } />
         {/* questions list */ }
-
-        <section className="flex flex-col space-y-5">
+        <section className="flex flex-col space-y-5 animate-fadeInLeft">
           <Question question="Question test">
             <Keybindings />
           </Question>
