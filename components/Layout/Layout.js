@@ -21,15 +21,6 @@ const Layout = props => {
     }
   };
 
-  useEffect(() => {
-    if (hideScrolls) {
-      document.querySelector('html').classList.toggle('overflow-hidden');
-      window.scrollTo(0, 0);
-    } else if (hideScrolls === false) {
-      document.querySelector('html').classList.toggle('overflow-hidden');
-    }
-  }, [hideScrolls]);
-
   const togglePlaypass = () => {
     if (isPlaypassOpen) {
       setPlaypassOpen(false);
@@ -39,6 +30,15 @@ const Layout = props => {
       setHideScrolls(true);
     }
   };
+
+  useEffect(() => {
+    if (hideScrolls) {
+      document.querySelector('html').classList.toggle('overflow-hidden');
+      window.scrollTo(0, 0);
+    } else if (hideScrolls === false) {
+      document.querySelector('html').classList.toggle('overflow-hidden');
+    }
+  }, [hideScrolls]);
 
   return (
     <div>
