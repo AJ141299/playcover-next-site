@@ -33,6 +33,14 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
   useEffect(() => {
     if (mobileMenuOpen) {
       setHideScrolls(true);
+      // auto closes mobile menu on xl screen and larger
+      window.addEventListener('resize', () => {
+        if (window.screen.width > 1280) {
+          if (mobileMenuOpen) {
+            toggleMobileMenu();
+          }
+        }
+      });
     } else if (mobileMenuOpen === false) {
       setHideScrolls(false);
     }

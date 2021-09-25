@@ -34,8 +34,10 @@ const Layout = props => {
   useEffect(() => {
     if (hideScrolls) {
       document.querySelector('html').classList.toggle('overflow-hidden');
+      document.querySelector('body').classList.toggle('overflow-y-hidden');
       window.scrollTo(0, 0);
     } else if (hideScrolls === false) {
+      document.querySelector('body').classList.toggle('overflow-y-hidden');
       document.querySelector('html').classList.toggle('overflow-hidden');
     }
   }, [hideScrolls]);
