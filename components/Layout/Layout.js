@@ -41,13 +41,18 @@ const Layout = props => {
       <Head>
         <link rel="icon" href="/assets/favicon.ico" />
       </Head>
-      <main>
+      <div className="flex flex-col h-[100vh]">
         <Navbar toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
-        { isPlaypassOpen && <Playpass togglePlaypass={ togglePlaypass } /> }
-        { isContactOpen && <Contact toggleContact={ toggleContact } /> }
-        { props.children }
+
+        <main>
+          { isPlaypassOpen && <Playpass togglePlaypass={ togglePlaypass } /> }
+          { isContactOpen && <Contact toggleContact={ toggleContact } /> }
+
+          { props.children }
+        </main>
+
         <Footer />
-      </main>
+      </div>
     </div>
   );
 };

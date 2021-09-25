@@ -3,8 +3,8 @@ import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-6 px-14 bg-white dark:bg-nav-footer text-gray-400 dark:text-gray-500 mt-10">
-      <div className="flex justify-between items-center">
+    <footer className="mt-auto">
+      <div className="flex justify-between items-center py-6 px-14 bg-white dark:bg-nav-footer text-gray-400 dark:text-gray-500">
         <section className="flex space-x-4">
           <FooterLink text="Legal Notice" link="/legal_notice" />
           <FooterLink text="Copyright Claims" link="mailto:alex@playcover.me" />
