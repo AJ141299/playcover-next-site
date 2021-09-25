@@ -26,8 +26,6 @@ const FaqQuestions = () => {
         question.classList.remove('hidden');
       });
 
-    console.log(questionsList);
-
   }, [searchTerm]);
 
   return (

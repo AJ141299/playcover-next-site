@@ -96,7 +96,7 @@ module.exports = {
         },
         fadeSlideUp: {
           '0%': { transform: 'translateY(100px)', opacity: "0%" },
-          '30%': { transform: 'translateY(-10px)', opacity: "40%" },
+          '30%': { transform: 'translateY(-10px)', opacity: "60%" },
           '100%': { transform: 'translateY(0px)', opacity: "100%" },
         },
         scaleUp: {
