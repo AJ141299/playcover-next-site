@@ -82,7 +82,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
   return (
     <>
       {/* desktop nav */ }
-      <nav className="select-none bg-body dark:bg-body-dark pt-1 xl:fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
+      <nav className="select-none bg-body dark:bg-body-dark pt-1 hidden xl:block xl:fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
         <div className="flex justify-between items-center px-6 md:px-10">
 
           {/* logo and primary */ }
@@ -131,14 +131,14 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
       </nav>
 
       {/* mobile nav toggle button */ }
-      <button onClick={ toggleMobileMenu } className="xl:hidden fixed rounded-full bg-white shadow-lg dark:bg-nav-footer p-9 bottom-[40px] right-[35px] transition duration-300 z-50">
+      <button onClick={ toggleMobileMenu } className="xl:hidden fixed rounded-full bg-white shadow-lg dark:bg-nav-footer p-9 bottom-[40px] right-[35px] transition duration-300 z-30 ease-in-out">
         <div className="flex flex-col rounded-full">
-          <div className={ "absolute top-[18%] right-[33%] transition duration-300" + (mobileMenuOpen ? ' opacity-0 ' : ' opacity-100 ') }>
+          <div className={ "absolute top-[18%] right-[33%] transition duration-300 ease-in-out" + (mobileMenuOpen ? ' opacity-0 ' : ' opacity-100 ') }>
             <MdKeyboardArrowUp size="25px" color="#E23B8B" />
             <MdKeyboardArrowDown size="25px" color="#E23B8B" />
           </div>
 
-          <div className={ "absolute top-[25%] right-[25%] transition duration-300" + (mobileMenuOpen ? ' opacity-100 ' : ' opacity-0 ') }>
+          <div className={ "absolute top-[25%] right-[25%] transition duration-300 ease-in-out" + (mobileMenuOpen ? ' opacity-100 ' : ' opacity-0 ') }>
             <RiCloseFill size="35px" color="#E23B8B" />
           </div>
         </div>

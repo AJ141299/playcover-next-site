@@ -32,12 +32,12 @@ const FaqQuestions = () => {
     <div className="flex justify-center">
 
       <div className="flex flex-col space-y-12">
-        <div className="sm:animate-fadeInRightFaster">
+        <div className="xl:animate-fadeInRightFaster">
           <SearchBar setSearchTerm={ setSearchTerm } />
         </div>
 
         {/* questions list */ }
-        <section className="flex flex-col space-y-5 lg:animate-fadeInLeftFaster">
+        <section className="flex flex-col space-y-5 xl:animate-fadeInLeftFaster">
           <Question question="Question test">
             <Keybindings />
           </Question>

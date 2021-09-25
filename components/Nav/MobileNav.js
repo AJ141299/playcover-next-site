@@ -1,35 +1,51 @@
 import NavLink from "./NavLink";
-import { RiCloseFill } from "react-icons/ri";
+import Link from 'next/link';
+import Image from 'next/image';
+
 
 const MobileNav = ({ toggles, isOpen }) => {
   const [toggleMenu, togglePlayPass, toggleContact] = toggles;
 
   return (
     <div className="relative">
-      <nav className={ 'select-none fixed h-[105vh] w-[50vw] sm:w-[27vw] right-0 bg-body dark:bg-nav-footer z-30 pt-32 text-xl transition duration-200 ease-in-out transform ' + (isOpen ? ' translate-y-[-10%] ' : ' translate-y-[-110%] ') }>
-        {/* close button */ }
-        <div onClick={ toggleMenu } className="bg-white dark:bg-body-dark rounded-full p-3 absolute bottom-[4.5rem] right-10 cursor-pointer">
-          <RiCloseFill size="35px" />
-        </div>
+      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] right-0 bg-body dark:bg-nav-footer z-20 pt-10 text-xl transition duration-200 ease-out transform ' + (isOpen ? ' translate-y-[0%] ' : ' translate-y-[-100%] ') }>
         {/* nav buttons */ }
-        <div className="flex flex-col items-center space-y-14">
+        <div className="flex flex-col items-center space-y-12">
+          {/* logo */ }
+          <Link href="/">
+            <a>
+              <Image
+                src="/assets/logo.png"
+                alt="playcover logo"
+                priority
+                width={ 64 }
+                height={ 64 }
+              />
+            </a>
+          </Link>
           <NavLink close={ toggleMenu } page="Home" pageRoute="/" />
           <NavLink close={ toggleMenu } page="FAQ" pageRoute="/faq" />
           <NavLink close={ toggleMenu } page="Changelog" pageRoute="/changelog" />
           <NavLink close={ toggleMenu } page="Team" pageRoute="/team" />
+
+          {/* contact button */ }
           <button onClick={ () => {
             toggleMenu();
             setTimeout(toggleContact, 250);
           } }>Contact Us</button>
+
+          {/* language button */ }
           <p>Language</p>
+
+          {/* playpass button */ }
+          <div className="flex justify-center">
+            <button onClick={ () => {
+              toggleMenu();
+              setTimeout(togglePlayPass, 250);
+            } } className="rounded-full px-4 py-2 dark:bg-gray-200 font-semibold text-center text-gray-800">Get Playpass</button>
+          </div>
         </div>
-        {/* playpass button */ }
-        <div className="flex justify-center">
-          <button onClick={ () => {
-            toggleMenu();
-            setTimeout(togglePlayPass, 250);
-          } } className="mt-16 rounded-full px-5 py-2 dark:bg-gray-200 font-semibold text-center text-gray-800">Get Playpass</button>
-        </div>
+
       </nav>
     </div>
   );

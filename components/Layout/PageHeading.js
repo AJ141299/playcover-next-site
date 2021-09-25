@@ -1,5 +1,5 @@
 const PageHeading = ({ text, overwriteStyles, replaceBottomPadding }) => {
-  let baseStyle = "flex justify-center text-gray-700 dark:text-menu-pink transition duration-200 pb-24 pt-14 xl:pt-[10rem]";
+  let baseStyle = "flex justify-center text-gray-700 dark:text-menu-pink transition duration-200 pb-24 pt-20 xl:pt-[10rem]";
 
 
   if (replaceBottomPadding) {
