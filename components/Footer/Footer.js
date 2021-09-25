@@ -10,7 +10,7 @@ const Footer = () => {
           <FooterLink text="Copyright Claims" link="mailto:alex@playcover.me" />
         </section>
 
-        <p className="pt-5 pb-1">Copyright © 2021 Alexandr Dorofeev. All rights reserved.</p>
+        <p className="pt-5 pb-1 md:pt-0 md:pb-0">Copyright © 2021 Alexandr Dorofeev. All rights reserved.</p>
 
         {/* icons */ }
         <div className="flex space-x-4 items-center">
