@@ -4,7 +4,7 @@ import PageHeading from "../components/Layout/PageHeading";
 
 const FAQ = () => {
 	return (
-		<div>
+		<div className="flex flex-col justify-center">
 			{/* page heading */ }
 			<span className="hidden lg:block">
 				<PageHeading text="Frequently Asked Questions" />

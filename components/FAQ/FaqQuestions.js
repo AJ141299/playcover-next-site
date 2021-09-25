@@ -2,7 +2,9 @@ import Keybindings from "./Keybindings/Keybindings";
 
 const FaqQuestions = () => {
   return (<div>
-    <Keybindings />
+    <div className='w-[60%]'>
+      <Keybindings />
+    </div>
   </div>);
 };
 
