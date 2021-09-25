@@ -30,7 +30,13 @@ body {
   transition-timing-function: ease-out;
 }
 
-.question-active {
+.answer-inactive {
   transition: 500ms;
   transition-timing-function: ease-out;
+  line-height: 1px;
+}
+.answer-active {
+  transition: 500ms;
+  transition-timing-function: ease-out;
+  line-height: normal;
 }
