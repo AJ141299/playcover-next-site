@@ -32,6 +32,7 @@ const Layout = props => {
     }
   };
 
+  // disable scrolling
   useEffect(() => {
     if (hideScrolls) {
       document.querySelector('html').classList.toggle('overflow-hidden');

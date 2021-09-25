@@ -20,23 +20,12 @@ body {
 
 .mobile-menu-inactive {
   left: -100%;
-  transition: 850ms;
+  transition: 750ms;
   transition-timing-function: ease-in;
 }
 
 .mobile-menu-active {
   left:0;
-  transition: 500ms;
+  transition: 400ms;
   transition-timing-function: ease-out;
-}
-
-.answer-inactive {
-  transition: 500ms;
-  transition-timing-function: ease-out;
-  line-height: 1px;
-}
-.answer-active {
-  transition: 500ms;
-  transition-timing-function: ease-out;
-  line-height: normal;
 }

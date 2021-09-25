@@ -32,7 +32,7 @@ const MobileNav = ({ toggles, isOpen }) => {
           {/* contact button */ }
           <button onClick={ () => {
             toggleMenu();
-            setTimeout(toggleContact, 250);
+            setTimeout(toggleContact, 400);
           } }>Contact Us</button>
 
           {/* language button */ }
@@ -42,7 +42,7 @@ const MobileNav = ({ toggles, isOpen }) => {
           <div className="flex justify-center">
             <button onClick={ () => {
               toggleMenu();
-              setTimeout(togglePlayPass, 250);
+              setTimeout(togglePlayPass, 400);
             } } className="rounded-full px-4 py-2 dark:bg-gray-200 font-semibold text-center text-gray-800">Get Playpass</button>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Team = () => {
 			<PageHeading text="Team" replaceBottomPadding="pb-12" />
 
 			<div className="flex justify-center pb-6">
-				<div className="shadow-md w-[85%] md:w-[55%] rounded-lg  bg-gray-200 dark:bg-[#222222] transition duration-200 ease-in-out xl:animate-slideUp">
+				<div className="shadow-md w-[85%] sm:w-[80%] lg:w-[55%] rounded-lg  bg-gray-200 dark:bg-[#222222] transition duration-200 ease-in-out xl:animate-slideUp">
 					<div className="p-4 md:p-10 space-y-5 flex flex-col ease-out xl:animate-fadeSlideUp">
 						<ListTeam icon={ <IoCodeSlashSharp size="25px" /> } role="Creator" name="iVoider" email="business@playcover.me" />
 						<ListTeam icon={ <HiOutlineDesktopComputer size="25px" /> } role="Website" name="AJ and Hades" email="AJ@playcover.me" />
