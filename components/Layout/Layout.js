@@ -45,7 +45,7 @@ const Layout = props => {
       <Head>
       </Head>
       <div className="flex flex-col h-[100vh]">
-        <Navbar toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
+        <Navbar setHideScrolls={ setHideScrolls } toggleContact={ toggleContact } togglePlaypass={ togglePlaypass } />
 
         <main>
           { isPlaypassOpen && <Playpass togglePlaypass={ togglePlaypass } /> }

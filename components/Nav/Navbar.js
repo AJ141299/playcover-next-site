@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import NavLink from './NavLink';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import { AiOutlineMenu } from "react-icons/ai";
+import MobileNav from './MobileNav';
 
-const Navbar = ({ toggleContact, togglePlaypass }) => {
+const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
   // router for active page styling
   const router = useRouter();
   const isActive = route => {
@@ -17,6 +19,24 @@ const Navbar = ({ toggleContact, togglePlaypass }) => {
       return 'border-transparent px-5 py-1 hover:border-menu-pink';
     }
   };
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(null);
+
+  const toggleMobileMenu = () => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    } else {
+      setMobileMenuOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      setHideScrolls(true);
+    } else if (mobileMenuOpen === false) {
+      setHideScrolls(false);
+    }
+  }, [mobileMenuOpen]);
 
   // nav bar scrolling animation
   useEffect(() => {
@@ -41,51 +61,65 @@ const Navbar = ({ toggleContact, togglePlaypass }) => {
   }, []);
 
   return (
-    <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
-      <div className="flex justify-between px-10">
-        {/* primary */ }
-        <section className="flex space-x-9">
-          {/* logo */ }
-          <Link href="/">
-            <a>
-              <Image
-                src="/assets/logo.png"
-                alt="playcover logo"
-                priority
-                width={ 64 }
-                height={ 64 }
-              />
-            </a>
-          </Link>
-          <div className="flex items-center space-x-5">
-            <NavLink page="Home" pageRoute="/" />
-            <NavLink page="FAQ" pageRoute="/faq" />
-            <NavLink page="Changelog" pageRoute="/changelog" />
-            <NavLink page="Team" pageRoute="/team" />
-            {/* contact button */ }
-            <button
-              className="font-semibold text-center border-2 rounded-full border-transparent px-5 py-1 hover:border-menu-pink transition duration-300"
-              onClick={ () => {
-                toggleContact();
-              } }
-            >
-              Contact Us
-            </button>
-          </div>
-        </section>
+    <>
+      {/* desktop nav */ }
+      <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
+        <div className="flex justify-between items-center px-10">
 
-        {/* secondary */ }
-        <section className="flex items-center space-x-6 pr-8">
-          <button
-            className="font-semibold text-center bg-gray-700 text-gray-200 dark:bg-gray-300  dark:text-gray-800 hover:bg-gray-800 dark:hover:bg-white rounded-full px-5 py-1 transition duration-300"
-            onClick={ togglePlaypass }
-          >
-            Get PlayPass
-          </button>
-          <LanguageSelector />
-        </section>
-      </div>
-    </nav>
+          {/* logo and primary */ }
+          <section className="flex space-x-9">
+            {/* logo */ }
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/logo.png"
+                  alt="playcover logo"
+                  priority
+                  width={ 64 }
+                  height={ 64 }
+                />
+              </a>
+            </Link>
+            {/* primary */ }
+            <div className="hidden xl:flex items-center space-x-5">
+              <NavLink page="Home" pageRoute="/" />
+              <NavLink page="FAQ" pageRoute="/faq" />
+              <NavLink page="Changelog" pageRoute="/changelog" />
+              <NavLink page="Team" pageRoute="/team" />
+              {/* contact button */ }
+              <button
+                className="font-semibold text-center border-2 rounded-full border-transparent px-5 py-1 hover:border-menu-pink transition duration-300"
+                onClick={ () => {
+                  toggleContact();
+                } }
+              >
+                Contact Us
+              </button>
+            </div>
+          </section>
+
+          {/* secondary */ }
+          <section className="hidden xl:flex items-center space-x-6 pr-8">
+            <button
+              className="font-semibold text-center bg-gray-700 text-gray-200 dark:bg-gray-300  dark:text-gray-800 hover:bg-gray-800 dark:hover:bg-white rounded-full px-5 py-1 transition duration-300"
+              onClick={ togglePlaypass }
+            >
+              Get PlayPass
+            </button>
+            <LanguageSelector />
+          </section>
+
+          {/* mobile menu button */ }
+          <div onClick={ toggleMobileMenu } className="xl:hidden pr-2 cursor-pointer">
+            <AiOutlineMenu size="30px" />
+          </div>
+
+        </div>
+      </nav>
+
+      {/* mobile nav */ }
+      { mobileMenuOpen && <MobileNav /> }
+    </>
   );
 };
 
