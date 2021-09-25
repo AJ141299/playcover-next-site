@@ -63,8 +63,8 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
   return (
     <>
       {/* desktop nav */ }
-      <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
-        <div className="flex justify-between items-center px-10">
+      <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100%] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
+        <div className="flex justify-between items-center px-6 md:px-10">
 
           {/* logo and primary */ }
           <section className="flex space-x-9">
@@ -118,7 +118,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls }) => {
       </nav>
 
       {/* mobile nav */ }
-      <MobileNav isOpen={ mobileMenuOpen } toggleMenu={ toggleMobileMenu } />
+      <MobileNav toggles={ [toggleMobileMenu, togglePlaypass, toggleContact] } isOpen={ mobileMenuOpen } />
     </>
   );
 };

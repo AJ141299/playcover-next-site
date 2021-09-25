@@ -6,6 +6,7 @@ export const getStaticProps = async () => {
 		'https://api.github.com/repos/iVoider/PlayCover/releases'
 	);
 	const gitHubData = await response.json();
+	// refreshes on server every 2400 seconds / ISR feature
 	return { props: { gitHubData }, revalidate: 2400 };
 };
 

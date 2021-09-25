@@ -6,15 +6,19 @@ const FAQ = () => {
 	return (
 		<div className="flex flex-col justify-center">
 			{/* page heading */ }
-			<span className="hidden lg:block">
-				<PageHeading text="Frequently Asked Questions" />
-			</span>
-			<span className="lg:hidden">
-				<PageHeading text="FAQ" overwriteStyles="text-5xl font-bold" />
-			</span>
+			<section>
+				<span className="hidden md:block">
+					<PageHeading text="Frequently Asked Questions" />
+				</span>
+				<span className="block md:hidden">
+					<PageHeading text="FAQ" overwriteStyles="text-5xl font-bold" />
+				</span>
+			</section>
 
 			{/* data */ }
-			<FaqQuestions />
+			<section className="pb-10">
+				<FaqQuestions />
+			</section>
 		</div>
 	);
 };

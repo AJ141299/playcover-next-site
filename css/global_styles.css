@@ -5,6 +5,9 @@
 /* prevents content shifting when vertical scroll bar appears/disappears */
 html {
   overflow-y: overlay;
+
+  /* fixes mobile nav bar extending width */
+  overflow-x:hidden;
 }
 
 /* fixes long links extending the page width on mobile such as on changelog page */
