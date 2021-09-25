@@ -8,7 +8,7 @@ const MobileNav = ({ toggles, isOpen }) => {
 
   return (
     <div className="relative">
-      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] right-0 bg-body dark:bg-nav-footer z-20 pt-10 text-xl transition duration-200 ease-out transform ' + (isOpen ? ' translate-y-[0%] ' : ' translate-y-[-100%] ') }>
+      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] transform bg-body dark:bg-nav-footer z-20 pt-10 text-xl' + (isOpen ? ' mobile-menu-active ' : ' mobile-menu-inactive ') }>
         {/* nav buttons */ }
         <div className="flex flex-col items-center space-y-12">
           {/* logo */ }
@@ -18,11 +18,12 @@ const MobileNav = ({ toggles, isOpen }) => {
                 src="/assets/logo.png"
                 alt="playcover logo"
                 priority
-                width={ 64 }
-                height={ 64 }
+                width={ 70 }
+                height={ 70 }
               />
             </a>
           </Link>
+
           <NavLink close={ toggleMenu } page="Home" pageRoute="/" />
           <NavLink close={ toggleMenu } page="FAQ" pageRoute="/faq" />
           <NavLink close={ toggleMenu } page="Changelog" pageRoute="/changelog" />

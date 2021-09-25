@@ -56,7 +56,7 @@ module.exports = {
         slideUp: 'slideUp 1.5s ease-out',
         fadeSlideUp: 'fadeSlideUp 2.2s ease-out',
         scaleUp: 'scaleUp 0.7s ease-out',
-        menuSlideDown: 'menuSlideDown 0.7s ease-out',
+        menuFadeIn: 'menuFadeIn 0.5s ease-out',
       },
 
       keyframes: {
@@ -104,10 +104,12 @@ module.exports = {
           '0%': { transform: 'scale(0.5)', opacity: "0%" },
           '100%': { transform: 'scale(1)', opacity: "100%" },
         },
-        menuSlideDown: {
-          '0%': { transform: 'translateY(-100vh)', opacity: "50%" },
+        menuFadeIn: {
+          '0%': { transform: 'translateY(10vh)', opacity: "0%" },
+          '50%': { opacity: "70%" },
           '100%': { transform: 'translateY(0vh)', opacity: "100%" },
         },
+
       },
     },
     variants: {
