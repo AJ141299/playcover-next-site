@@ -28,7 +28,7 @@ const Home = props => {
   }
 
   return (
-    <div className="pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
+    <div className="pt-20 xl:pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
       <h1 className="font-extrabold animate-shiver text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
         PlayCover
       </h1>
@@ -46,25 +46,31 @@ const Home = props => {
         </div>
       </section>
       <div className="backface-off pt-10">
-        <div className="backface-off hidden dark:flex rounded-lg shadow-md xl:animate-fadeInAbove">
-          <Image
-            className="rounded-lg"
-            src="/assets/playcover-screenshot-dark.png"
-            alt="playcover app dark screenshot"
-            width={ heroImageWidth }
-            height={ heroImageHeight }
-            priority
-          />
+        <div className="backface-off hidden dark:flex shadow-md xl:animate-fadeInAbove">
+          <div className="grid">
+            <Image
+              className="rounded-lg"
+              src="/assets/playcover-screenshot-dark.png"
+              alt="playcover app dark screenshot"
+              width={ heroImageWidth }
+              height={ heroImageHeight }
+              loading="eager"
+              priority={ true }
+            />
+          </div>
         </div>
         <div className="backface-off flex dark:hidden shadow-md xl:animate-fadeInAbove">
-          <Image
-            className="rounded-lg"
-            src="/assets/playcover-screenshot-light.png"
-            alt="playcover app light screenshot"
-            width={ heroImageWidth }
-            height={ heroImageHeight }
-            priority
-          />
+          <div className="grid">
+            <Image
+              className="rounded-lg"
+              src="/assets/playcover-screenshot-light.png"
+              alt="playcover app light screenshot"
+              width={ heroImageWidth }
+              height={ heroImageHeight }
+              loading="eager"
+              priority={ true }
+            />
+          </div>
         </div>
       </div>
     </div>
