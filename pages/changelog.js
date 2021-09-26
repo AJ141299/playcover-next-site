@@ -15,7 +15,7 @@ const Changelog = ({ gitHubData }) => {
 		<>
 			<PageHeading text="Changelog" />
 			<div className="flex justify-center w-[100vw]">
-				<div className="w-[85%] sm:w-[76%]">
+				<div className="w-[82%] sm:w-[76%] sm:max-w-[90rem]">
 					<ListChangelog gitData={ gitHubData } />
 				</div>
 			</div>
