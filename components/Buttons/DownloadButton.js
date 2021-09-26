@@ -12,7 +12,7 @@ const DownloadButton = ({ text, isActive }) => {
   }
 
   return (
-    <button className={ buttonStyling }>
+    <button className={ buttonStyling + " download-button" }>
       <div className="mr-[5px] mb-[0.07rem]">
         <HiDownload size="18px" />
       </div>

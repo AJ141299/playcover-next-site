@@ -53,8 +53,15 @@ class MyDocument extends Document {
             as="font"
             type="font/woff"
           />
+
+          {/* font test */ }
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"></link>
+
         </Head>
-        <body className="bg-body dark:bg-body-dark font-sourceSansPro text-gray-700 dark:text-gray-300">
+        <body className="bg-body dark:bg-body-dark text-gray-700 dark:text-gray-300">
           <Main />
           <NextScript />
         </body>
