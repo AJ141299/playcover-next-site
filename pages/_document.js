@@ -16,49 +16,42 @@ class MyDocument extends Document {
             href="/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-Light.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-Regular.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-Italic.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-SemiBold.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-Bold.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
           <link
             rel="preload"
             href="/fonts/SourceSansPro/SourceSansPro-Black.woff"
             as="font"
             type="font/woff"
-            crossorigin="anonymous"
           />
 
           {/* font test */ }
