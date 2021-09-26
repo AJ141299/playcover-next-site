@@ -10,59 +10,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Source Sans Pro fonts preload */ }
-          {/* <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-Light.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-Regular.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-Italic.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-SemiBold.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-Bold.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/SourceSansPro/SourceSansPro-Black.woff"
-            as="font"
-            type="font/woff"
-            crossorigin
-          /> */}
-
-          {/* font test */ }
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
