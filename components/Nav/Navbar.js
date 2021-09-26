@@ -82,7 +82,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
   return (
     <>
       {/* desktop nav */ }
-      <nav className="select-none bg-body dark:bg-body-dark pt-1 hidden xl:block xl:fixed w-[100vw] text-[1.05rem] font-semibold text-center z-10 transition duration-300 ease-out">
+      <nav className="select-none bg-body dark:bg-body-dark pt-1 hidden xl:block xl:fixed w-[100vw] text-lg font-semibold text-center z-10 transition duration-300 ease-out">
         <div className="flex justify-between items-center px-6 md:px-10">
 
           {/* logo and primary */ }
@@ -107,7 +107,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
               <NavLink page="Team" pageRoute="/team" />
               {/* contact button */ }
               <button
-                className="font-semibold text-center border-2 rounded-full border-transparent px-5 py-1 hover:border-menu-pink transition duration-300"
+                className="font-semibold text-center border-2 rounded-full border-transparent px-5 py-1 hover:text-[#f54399] transition duration-300"
                 onClick={ () => {
                   toggleContact();
                 } }
