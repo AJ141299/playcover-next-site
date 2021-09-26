@@ -10,11 +10,49 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Open Sans and Source Sans Pro fonts import */ }
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-            rel="stylesheet"
-          /> */}
+          {/* Source Sans Pro fonts preload */ }
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-Light.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-Regular.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-Italic.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-SemiBold.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-Bold.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/SourceSansPro/SourceSansPro-Black.woff2"
+            as="font"
+            crossOrigin=""
+          />
         </Head>
         <body className="bg-body dark:bg-body-dark font-sourceSansPro text-gray-700 dark:text-gray-300">
           <Main />
