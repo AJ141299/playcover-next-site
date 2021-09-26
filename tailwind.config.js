@@ -38,7 +38,6 @@ module.exports = {
 
       fontFamily: {
         sourceSansPro: "'Source Sans Pro', Arial, sans-serif;",
-        openSans: "'Open Sans', Arial, sans-serif",
       },
 
       animation: {
