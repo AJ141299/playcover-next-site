@@ -28,15 +28,21 @@ const Home = props => {
   }
 
   return (
-    <div className="pt-20 xl:pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
-      <h1 className="font-extrabold animate-shiver text-[48px] md:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
+    <div className="pt-16 sm:pt-20 xl:pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
+      {/* text logo */ }
+      <h1 className="font-extrabold animate-shiver text-[3.5rem] sm:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
         PlayCover
       </h1>
-      <section className="pt-2">
-        <h2 className="xl:animate-fadeIn md:pl-1 max-w-xs md:max-w-7xl pt-6 md:pt-4 text-center text-lg md:text-2xl">
+
+      <section className="pt-2 flex flex-col justify-center">
+
+        {/* hero text */ }
+        <h2 className="xl:animate-fadeIn w-auto md:max-w-7xl px-10 pt-6 md:pt-4 text-center text-lg md:text-2xl">
           { t('hero_text') }
         </h2>
-        <div className="flex justify-center space-x-5 pt-5">
+
+        {/* download buttons */ }
+        <div className="flex flex-col w-auto items-center md:flex-row md:justify-center space-y-4 md:space-y-0 md:space-x-5 pt-5">
           <a className="xl:animate-fadeInRight" href={ siliconDownloadLink }>
             <DownloadButton isActive={ true } text="Download for Apple Silicon" />
           </a>
@@ -45,34 +51,32 @@ const Home = props => {
           </div>
         </div>
       </section>
-      <div className="backface-off pt-10">
-        <div className="backface-off hidden dark:flex shadow-md xl:animate-fadeInAbove">
-          <div className="grid">
-            <Image
-              className="rounded-lg"
-              src="/assets/playcover-screenshot-dark.png"
-              alt="playcover app dark screenshot"
-              width={ heroImageWidth }
-              height={ heroImageHeight }
-              loading="eager"
-              priority={ true }
-            />
-          </div>
+
+      {/* hero images */ }
+      <section className="backface-off pt-10">
+        <div className="backface-off hidden dark:flex xl:animate-fadeInAbove">
+          <Image
+            className="rounded md:rounded-[8px] w-auto"
+            src="/assets/playcover-screenshot-dark.png"
+            alt="playcover app dark screenshot"
+            width={ heroImageWidth }
+            height={ heroImageHeight }
+            loading="eager"
+            priority={ true }
+          />
         </div>
-        <div className="backface-off flex dark:hidden shadow-md xl:animate-fadeInAbove">
-          <div className="grid">
-            <Image
-              className="rounded-lg"
-              src="/assets/playcover-screenshot-light.png"
-              alt="playcover app light screenshot"
-              width={ heroImageWidth }
-              height={ heroImageHeight }
-              loading="eager"
-              priority={ true }
-            />
-          </div>
+        <div className="backface-off flex dark:hidden xl:animate-fadeInAbove">
+          <Image
+            className="rounded md:rounded-[8px] w-auto"
+            src="/assets/playcover-screenshot-light.png"
+            alt="playcover app light screenshot"
+            width={ heroImageWidth }
+            height={ heroImageHeight }
+            loading="eager"
+            priority={ true }
+          />
         </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { HiDownload } from "react-icons/hi";
 
 const DownloadButton = ({ text, isActive }) => {
   let buttonStyling =
-    'flex items-center justify-center font-openSans text-xs md:text-sm tracking-widest uppercase py-4 px-12 md:py-4 md:px-14 rounded-full ';
+    'flex items-center justify-center font-openSans text-xs md:text-sm tracking-widest uppercase py-3 px-8 md:py-4 md:px-14 rounded-full ';
   if (isActive) {
     buttonStyling +=
       'drop-shadow-sm bg-logo-purple dark:bg-logo-purple-dark hover:bg-logo-purple-light  text-gray-100 cursor-pointer  transition duration-100 ease-linear';
