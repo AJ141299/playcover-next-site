@@ -8,7 +8,7 @@ const MobileNav = ({ toggles, isOpen }) => {
 
   return (
     <div className="relative">
-      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] transform bg-body dark:bg-nav-footer z-20 pt-10 text-xl' + (isOpen ? ' mobile-menu-active ' : ' mobile-menu-inactive ') }>
+      <nav className={ 'select-none fixed h-[100vh] w-[50vw] sm:w-[27vw] transform bg-body dark:bg-nav-footer z-20 pt-10 text-xl font-semibold ' + (isOpen ? ' mobile-menu-active ' : ' mobile-menu-inactive ') }>
         {/* nav buttons */ }
         <div className="flex flex-col items-center space-y-12">
           {/* logo */ }
@@ -33,10 +33,10 @@ const MobileNav = ({ toggles, isOpen }) => {
           <button onClick={ () => {
             toggleMenu();
             setTimeout(toggleContact, 400);
-          } }>Contact Us</button>
+          } } className="font-semibold ">Contact Us</button>
 
           {/* language button */ }
-          <p>Language</p>
+          <p className="font-semibold ">Language</p>
 
           {/* playpass button */ }
           <div className="flex justify-center">
