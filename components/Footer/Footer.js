@@ -4,7 +4,7 @@ import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="mt-auto">
-      <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center py-8 md:py-6 px-4 md:px-14 bg-white dark:bg-nav-footer text-gray-400 dark:text-gray-500">
+      <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center py-8 pb-6 md:py-6 px-6 md:px-14 bg-white dark:bg-nav-footer text-gray-400 dark:text-gray-500">
         <section className="flex space-x-4">
           <FooterLink text="Legal Notice" link="/legal_notice" />
           <FooterLink text="Copyright Claims" link="mailto:alex@playcover.me" />

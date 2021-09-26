@@ -10,7 +10,7 @@ const PageHeading = ({ text, overwriteStyles, replaceBottomPadding }) => {
   if (overwriteStyles && typeof overwriteStyles == "string") {
     styles = `${baseStyle} ${overwriteStyles}`;
   } else {
-    styles = `${baseStyle} text-4xl sm:text-5xl font-semibold`;
+    styles = `${baseStyle} text-5xl font-semibold`;
   }
 
   return (<div className={ styles }>

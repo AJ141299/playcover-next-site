@@ -24,8 +24,10 @@ const LegalNotice = () => {
 	return <div className="">
 		<PageHeading text="Legal Notice" />
 
-		<main className="px-40">
-			<Legal data={ legalData } />
+		<main className="w-auto items-center flex flex-col pb-10">
+			<div className="px-12 sm:px-20 max-w-7xl">
+				<Legal data={ legalData } />
+			</div>
 		</main>
 
 	</div>;
