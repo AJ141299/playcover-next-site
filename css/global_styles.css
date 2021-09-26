@@ -4,28 +4,24 @@
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff) format('woff');
   font-style: normal;
   font-weight: 200;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Source Sans Pro';
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Light.woff) format('woff');
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Source Sans Pro';
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Regular.woff) format('woff');
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Source Sans Pro';
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Italic.woff) format('woff');
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
 }
 
 @font-face {
@@ -33,7 +29,6 @@
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-SemiBold.woff) format('woff');
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
 }
 
 @font-face {
@@ -41,7 +36,6 @@
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Bold.woff) format('woff');
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
 }
 
 @font-face {
@@ -49,45 +43,7 @@
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Black.woff) format('woff');
   font-style: normal;
   font-weight: 800;
-  font-display: swap;
 }
-
-/* open sans font import */
-
-/* @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), url(/fonts/OpenSans/OpenSans-Light-webfont.woff) format('woff');
-  font-style: normal;
-  font-weight:200;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), url(/fonts/OpenSans/OpenSans-Regular-webfont.woff) format('woff');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), url(/fonts/OpenSans/OpenSans-Semibold-webfont.woff) format('woff');
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), url(/fonts/OpenSans/OpenSans-Bold-webfont.woff) format('woff');
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), url(/fonts/OpenSans/OpenSans-ExtraBold-webfont.woff) format('woff');
-  font-style: normal;
-  font-weight: 800;
-} */
 
 .backface-off {
   backface-visibility: hidden;
