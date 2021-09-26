@@ -1,5 +1,5 @@
 /* source sans pro import */
-@font-face {
+/* @font-face {
   font-family: 'Source Sans Pro';
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff) format('woff');
   font-style: normal;
@@ -43,14 +43,14 @@
   src: local('Source Sans Pro'), url(/fonts/SourceSansPro/SourceSansPro-Black.woff) format('woff');
   font-style: normal;
   font-weight: 800;
-}
+} */
 
 .backface-off {
   backface-visibility: hidden;
 }
 
 body {
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  /* font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; */
 
   /* prevents content shifting when vertical scroll bar appears/disappears */
   overflow-y: overlay;
