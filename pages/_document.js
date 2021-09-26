@@ -69,7 +69,6 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet"></link>
 
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"></link>
-
         </Head>
         <body className="bg-body dark:bg-body-dark font-sourceSansPro text-gray-700 dark:text-gray-300">
           <Main />
