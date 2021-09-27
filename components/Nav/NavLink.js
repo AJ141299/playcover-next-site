@@ -6,10 +6,10 @@ const NavLink = ({ page, pageRoute, close }) => {
   const isActive = route => {
     if (route == router.pathname) {
       // active styles
-      return 'border-[#f54399] px-7 py-2 xl:px-5 xl:py-1 text-[#f54399]';
+      return 'border-[#f54399] px-[1vw] lg:px-7 py-2 text-[#f54399]';
     } else {
       // inactive styles
-      return 'border-transparent px-7 py-2 xl:px-5 xl:py-1 hover:text-[#f54399]';
+      return 'border-transparent px-[1vw] lg:px-7 py-2 hover:text-[#f54399]';
     }
   };
   return (

@@ -5,19 +5,14 @@ module.exports = {
   theme: {
     screens: {
       'sm': '640px',
-      // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
+      'md': '911px',
 
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
+      'lg': '1100px',
 
       'xl': '1200px',
-      // => @media (min-width: 1200px) { ... }
 
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       colors: {

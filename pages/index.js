@@ -28,7 +28,7 @@ const Home = props => {
   }
 
   return (
-    <div className="pt-16 sm:pt-20 xl:pt-[8rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
+    <div className="mt-[8.5rem] text-gray-700 dark:text-gray-200 bg-body dark:bg-body-dark flex flex-col items-center">
       {/* text logo */ }
       <h1 className="font-extrabold animate-shiver text-[3.5rem] sm:text-[5rem] bg-gradient-to-b from-logo-pink to-text-purple text-transparent bg-clip-text">
         PlayCover
@@ -55,7 +55,7 @@ const Home = props => {
       {/* hero images */ }
       <section className="backface-off pt-10">
         {/* dark */ }
-        <div className="backface-off hidden dark:flex xl:animate-fadeInAbove">
+        <div className="backface-off hidden dark:flex md:animate-fadeInAbove">
           <Image
             className="rounded md:rounded-[8px] w-auto"
             src="/assets/playcover-screenshot-dark.png"
@@ -67,7 +67,7 @@ const Home = props => {
           />
         </div>
         {/* light */ }
-        <div className="backface-off flex dark:hidden xl:animate-fadeInAbove">
+        <div className="backface-off flex dark:hidden md:animate-fadeInAbove">
           <Image
             className="rounded md:rounded-[8px] w-auto"
             src="/assets/playcover-screenshot-light.png"

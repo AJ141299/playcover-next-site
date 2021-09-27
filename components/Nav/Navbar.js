@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import NavLink from './NavLink';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import { AiOutlineMenu } from "react-icons/ai";
 
 import MobileNav from './MobileNav';
-import MobileMenuButton from './MobileMenuButton';
 
 const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen, setMobileMenuOpen }) => {
   // router for active page styling
@@ -82,9 +82,8 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
   return (
     <>
       {/* desktop nav */ }
-      <nav className="select-none bg-body dark:bg-body-dark pt-1 hidden xl:block xl:fixed w-[100vw] text-lg font-semibold text-center z-10 transition duration-300 ease-out">
-        <div className="flex justify-between items-center px-6 md:px-10">
-
+      <nav className="select-none bg-body dark:bg-body-dark pt-1 fixed w-[100vw] lg:text-lg font-semibold text-center z-10 transition duration-300 ease-out">
+        <div className="flex justify-between items-center pl-6 pr-10 md:px-10">
           {/* logo and primary */ }
           <section className="flex space-x-9">
             {/* logo */ }
@@ -103,7 +102,7 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
               </a>
             </Link>
             {/* primary */ }
-            <div className="hidden xl:flex items-center space-x-5">
+            <div className="hidden md:flex items-center space-x-5">
               <NavLink page="Home" pageRoute="/" />
               <NavLink page="FAQ" pageRoute="/faq" />
               <NavLink page="Changelog" pageRoute="/changelog" />
@@ -121,20 +120,28 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
           </section>
 
           {/* secondary */ }
-          <section className="hidden xl:flex items-center space-x-6 pr-8">
+          <section className="hidden md:flex items-center space-x-6 pr-8">
             <button
               className="font-semibold text-center bg-gray-700 text-gray-200 dark:bg-gray-300  dark:text-gray-800 hover:bg-gray-800 dark:hover:bg-white rounded-full px-5 py-1 transition duration-300"
               onClick={ togglePlaypass }
             >
               Get PlayPass
             </button>
-            <LanguageSelector />
+            <div className="hover:text-[#f54399]">
+              <LanguageSelector />
+            </div>
+          </section>
+
+          {/* mobile nav button */ }
+          <section onClick={ toggleMobileMenu } className="cursor-pointer md:hidden">
+            <AiOutlineMenu size="30px" />
+
+            {/* <MobileMenuButton toggleMenu={ toggleMobileMenu } isMenuOpen={ mobileMenuOpen } /> */ }
           </section>
         </div>
       </nav>
 
-      {/* mobile nav toggle button */ }
-      <MobileMenuButton toggleMenu={ toggleMobileMenu } isMenuOpen={ mobileMenuOpen } />
+
 
       {/* mobile nav */ }
       <MobileNav toggles={ [toggleMobileMenu, togglePlaypass, toggleContact] } isOpen={ mobileMenuOpen } />

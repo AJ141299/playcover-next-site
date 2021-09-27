@@ -74,13 +74,13 @@ body {
 
 
 .mobile-menu-inactive {
-  left: -100%;
+  right: -100%;
   transition: 750ms;
   transition-timing-function: ease-in;
 }
 
 .mobile-menu-active {
-  left:0;
+  right:0;
   transition: 400ms;
   transition-timing-function: ease-out;
 }
