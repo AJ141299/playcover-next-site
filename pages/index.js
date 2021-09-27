@@ -91,7 +91,7 @@ export async function getStaticProps({ locale }) {
       ...(await serverSideTranslations(locale, ['Home'])),
       gitHubData,
     },
-    revalidate: 300,
+    revalidate: 150,
   };
 }
 
