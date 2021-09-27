@@ -54,6 +54,7 @@ const Home = props => {
 
       {/* hero images */ }
       <section className="backface-off pt-10">
+        {/* dark */ }
         <div className="backface-off hidden dark:flex xl:animate-fadeInAbove">
           <Image
             className="rounded md:rounded-[8px] w-auto"
@@ -65,6 +66,7 @@ const Home = props => {
             priority={ true }
           />
         </div>
+        {/* light */ }
         <div className="backface-off flex dark:hidden xl:animate-fadeInAbove">
           <Image
             className="rounded md:rounded-[8px] w-auto"

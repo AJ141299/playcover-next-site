@@ -93,7 +93,8 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
                 <Image
                   src="/assets/logo.png"
                   alt="playcover logo"
-                  priority
+                  loading="eager"
+                  priority={ true }
                   width={ 64 }
                   height={ 64 }
                 />
