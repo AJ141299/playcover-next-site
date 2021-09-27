@@ -97,6 +97,8 @@ const Navbar = ({ toggleContact, togglePlaypass, setHideScrolls, mobileMenuOpen,
                   width={ 64 }
                   height={ 64 }
                 />
+                {/* code to fix logo flicker on page navigation to home */ }
+                {/* <img src="/assets/logo.png" alt="playcover logo" width="64px" height="64px" /> */ }
               </a>
             </Link>
             {/* primary */ }
