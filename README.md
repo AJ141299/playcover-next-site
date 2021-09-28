@@ -4,11 +4,11 @@ After developing and launching the first version of the website using HTML, CSS,
 
 
 # Result 
-* Mobile performance increased by 22.7%, 
+* Mobile performance increased by 22.7%
 * Desktop by 18.1% 
 * SEO score by 10.4%
-* Better maintainbility and scalability.
-* Users reported a better and smoother navigation experience.
+* Better maintainbility and scalability
+* Users reported a better and smoother navigation experience
 
 # Tech Stack
 
