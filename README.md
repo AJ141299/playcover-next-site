@@ -1,29 +1,18 @@
-# Next.js + Tailwind CSS Example
+# Inspiration
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+After developing and launching the first version of the website using HTML, CSS, and vanilla JS, we received positive feedback from the user-base, however, soon it became apparent that maintaining and scaling the project consumes much more time than we anticipated, given the fact that we support 5 languages other than English. Hence, I began looking into components-based libraries such as React, and was able to rewrite the entire website in about a week. While creating this new version, a major issue of bad SEO performance arose, being a single-page-application. To counter this, Next.js was introduced in the project and server-side generation was enabled.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
-## Preview
+# Improvements
+Mobile performance increased by 22.7%, 
+Desktop by 18.1% 
+SEO score by 10.4%
+Users reported a better and smoother navigation experience.
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+# Tech Stack
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+* UI - [TailwindCSS](https://tailwindcss.com/)
+* Components-based Library - [React](https://reactjs.org/)
+* Server-side rendering/generation - [Next.js](https://nextjs.org/)
+* Localisation - [next-i18next](https://github.com/isaachinman/next-i18next)
+* Hosting - [Vercel](https://vercel.com/)
