@@ -4,10 +4,10 @@ After developing and launching the first version of the website using HTML, CSS,
 
 
 # Improvements
-Mobile performance increased by 22.7%, 
-Desktop by 18.1% 
-SEO score by 10.4%
-Users reported a better and smoother navigation experience.
+* Mobile performance increased by 22.7%, 
+* Desktop by 18.1% 
+* SEO score by 10.4%
+* Users reported a better and smoother navigation experience.
 
 # Tech Stack
 
